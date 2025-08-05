@@ -56,18 +56,18 @@ public class PlayerController : MonoBehaviour
         }
         else if (!wasGrounded && fallVelocityBeforeLanding < maxSafeFallSpeed)
         {
-            Shatter();
+            //Shatter();
         }
     }
 
-    void Shatter()
-    {
-        if (shatteredVersion != null)
-        {
-            Instantiate(shatteredVersion, transform.position, transform.rotation);
-        }
+    // void Shatter()
+    // {
+    //     if (shatteredVersion != null)
+    //     {
+    //         Instantiate(shatteredVersion, transform.position, transform.rotation);
+    //     }
 
-        // Add particle/sound effects here if needed
-        Destroy(gameObject);
-    }
+    //     // Add particle/sound effects here if needed
+    //     Destroy(gameObject);
+    // }
 }
