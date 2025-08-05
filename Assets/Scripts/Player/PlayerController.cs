@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Fragility")]
     public float maxSafeFallSpeed = -15f; // if fall speed exceeds this, player shatters
-    public GameObject shatteredVersion;
 
     private Rigidbody rb;
     private bool isGrounded;
     private float fallVelocityBeforeLanding;
+    [SerializeField] private PlayerInput playerInput; 
 
     void Start()
     {
@@ -31,8 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        Vector3 movement = new Vector3(moveInput * moveSpeed, rb.linearVelocity.y, 0f);
+        Vector3 movement = new Vector3(playerInput.move.x * moveSpeed, rb.linearVelocity.y, 0f);
         rb.linearVelocity = movement;
     }
 
