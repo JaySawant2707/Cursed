@@ -1,4 +1,5 @@
-﻿ using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -27,6 +28,11 @@ namespace StarterAssets
 
         [Tooltip("Acceleration and deceleration")]
         public float SpeedChangeRate = 10.0f;
+
+        [Header("Crouch")]
+        public float CrouchHeight = 0.8f;
+        public float StandingHeight = 1.8f;
+        public float CrouchSpeed = 1.5f;
 
         public AudioClip LandingAudioClip;
         public AudioClip[] FootstepAudioClips;
@@ -86,6 +92,7 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        private bool _isCrouching = false;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -97,8 +104,9 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        private int _animIDCrouch;
 
-#if ENABLE_INPUT_SYSTEM 
+#if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
 #endif
         private Animator _animator;
@@ -135,7 +143,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -150,6 +158,8 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            StandingHeight = _controller.height;
         }
 
         private void Update()
@@ -159,6 +169,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            HandleCrouch();
         }
 
         private void LateUpdate()
@@ -173,6 +184,7 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+            _animIDCrouch = Animator.StringToHash("Crouch");
         }
 
         private void GroundedCheck()
@@ -214,7 +226,13 @@ namespace StarterAssets
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
-            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+            float targetSpeed;
+            if (_isCrouching)
+                targetSpeed = CrouchSpeed;
+            else if (_input.sprint)
+                targetSpeed = SprintSpeed;
+            else
+                targetSpeed = MoveSpeed;
 
             // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -278,6 +296,41 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
+
+        private void HandleCrouch()
+        {
+            Debug.Log(_input.crouch);
+            if (_input.crouch && !_isCrouching)
+            {
+                _isCrouching = true;
+                _controller.height = CrouchHeight;
+                _controller.center = new Vector3(0, CrouchHeight / 2f, 0);
+                _input.crouch = false;
+            }
+            else if (_input.crouch && _isCrouching)
+            {
+                //Check ceiling before standing up
+                if (!Physics.CheckSphere(transform.position + Vector3.up * (StandingHeight - CrouchHeight), 0.1f))// correct the position of sphere
+                {
+                    _input.crouch = false;
+                    _isCrouching = false;
+                    _controller.height = StandingHeight;
+                    _controller.center = new Vector3(0, StandingHeight / 2f, 0);
+                    Debug.Log("get up");
+                }
+                else
+                {
+                    Debug.Log("can't get up - something is up =  ");
+                }
+            }
+
+            // Animate crouch state
+            if (_hasAnimator)
+            {
+                _animator.SetBool(_animIDCrouch, _isCrouching);
+            }
+        }
+
 
         private void JumpAndGravity()
         {
@@ -367,6 +420,8 @@ namespace StarterAssets
             Gizmos.DrawSphere(
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
+
+            Gizmos.DrawSphere(transform.position + Vector3.up * (StandingHeight - CrouchHeight), 0.1f);
         }
 
         private void OnFootstep(AnimationEvent animationEvent)
