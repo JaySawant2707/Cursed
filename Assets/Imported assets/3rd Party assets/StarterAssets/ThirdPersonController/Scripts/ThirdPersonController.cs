@@ -421,7 +421,7 @@ namespace StarterAssets
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
 
-            Gizmos.DrawSphere(transform.position + Vector3.up * (StandingHeight), 0.1f);
+            Gizmos.DrawSphere(transform.position + Vector3.up * StandingHeight, 0.1f);
         }
 
         private void OnFootstep(AnimationEvent animationEvent)
