@@ -310,7 +310,7 @@ namespace StarterAssets
             else if (_input.crouch && _isCrouching)
             {
                 //Check ceiling before standing up
-                if (!Physics.CheckSphere(transform.position + Vector3.up * (StandingHeight - CrouchHeight), 0.1f))// correct the position of sphere
+                if (!Physics.CheckSphere(transform.position + Vector3.up * StandingHeight, 0.1f))// correct the position of sphere
                 {
                     _input.crouch = false;
                     _isCrouching = false;
@@ -421,7 +421,7 @@ namespace StarterAssets
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
 
-            Gizmos.DrawSphere(transform.position + Vector3.up * (StandingHeight - CrouchHeight), 0.1f);
+            Gizmos.DrawSphere(transform.position + Vector3.up * StandingHeight, 0.1f);
         }
 
         private void OnFootstep(AnimationEvent animationEvent)
