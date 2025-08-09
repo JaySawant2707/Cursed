@@ -753,7 +753,7 @@ MonoBehaviour:
   selectionMaterial: {fileID: 2100000, guid: 3da6632af06df694e8df80a48c64877b, type: 2}
   selectableLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
 --- !u!4 &1162392359
 Transform:
   m_ObjectHideFlags: 0
