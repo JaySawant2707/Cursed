@@ -61,28 +61,28 @@ public class SelectObjectUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            if (highlight != null) 
-            {
-                if (selectionRenderer != null && selectionRenderer.material != selectionMaterial)
-                {
-                    originalMaterialSelection = selectionRenderer.material;
-                    selectionRenderer.material = selectionMaterial;
-                }
+            // if (highlight != null) 
+            // {
+            //     if (selectionRenderer != null && selectionRenderer.material != selectionMaterial)
+            //     {
+            //         originalMaterialSelection = selectionRenderer.material;
+            //         selectionRenderer.material = selectionMaterial;
+            //     }
 
                 ClickLogic(highlight.gameObject);
 
-                highlight = null;
-                highlightRenderer = null;
-            }
-            else
-            {
-                if (selection != null && selectionRenderer != null)
-                {
-                    selectionRenderer.material = originalMaterialSelection;
-                    selection = null;
-                    selectionRenderer = null;
-                }
-            }
+                // highlight = null;
+                // highlightRenderer = null;
+            //}
+            // else
+            // {
+            //     if (selection != null && selectionRenderer != null)
+            //     {
+            //         selectionRenderer.material = originalMaterialSelection;
+            //         selection = null;
+            //         selectionRenderer = null;
+            //     }
+            // }
         }
     }
 

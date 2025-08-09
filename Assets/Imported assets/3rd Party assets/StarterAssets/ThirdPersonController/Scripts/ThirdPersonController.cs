@@ -299,7 +299,6 @@ namespace StarterAssets
 
         private void HandleCrouch()
         {
-            Debug.Log(_input.crouch);
             if (_input.crouch && !_isCrouching)
             {
                 _isCrouching = true;
