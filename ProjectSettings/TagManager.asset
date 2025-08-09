@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - CinemachineTarget
+<<<<<<< Updated upstream
   - SelectableUI
+=======
+  - RockSet_01
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
