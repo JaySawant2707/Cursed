@@ -12,10 +12,10 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleCurves: 0
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: 
+    motionNodeName: a006c_body_hd_mesh
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -29,7 +29,108 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Turtle-Free_TempMotion
+      takeName: Turtle-Free_TempMotion
+      internalID: -7396946411416936976
+      firstFrame: 27
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 7
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: a006c_body_hd_mesh
+        weight: 1
+      - path: Turtle_Free
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catriglleg11
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catriglleg11/catriglleg12
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catriglleg11/catriglleg12/catriglleg13
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catriglleg41
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catriglleg41/catriglleg42
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catriglleg41/catriglleg42/catriglleg43
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigrleg11
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigrleg11/catrigrleg12
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigrleg11/catrigrleg12/catrigrleg13
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigrleg41
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigrleg41/catrigrleg42
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigrleg41/catrigrleg42/catrigrleg43
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigspinespiderspine1
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigspinespiderspine1/catrigspine2
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigspinespiderspine1/catrigspine2/catrigspine3
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigspinespiderspine1/catrigspine2/catrigspine3/catrighub01
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigspinespiderspine1/catrigspine2/catrigspine3/catrighub01/catrighub01bone01
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigspinespiderspine1/catrigspine2/catrigspine3/catrighub01/s_fxtop
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigtail01
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigtail01/catrigtail02
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/catrigtail01/catrigtail02/catrigtail03
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature/catrighub/s_fxmid
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 1
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 1/catrigrleg4platform
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 2
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 2/catrigrleg1platform
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 3
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 3/catriglleg4platform
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 4
+        weight: 1
+      - path: Turtle_Free/CC_Base_Pivot/Armature 4/catriglleg1platform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
