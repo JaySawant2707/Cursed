@@ -18,7 +18,7 @@ public class MovingObject : MonoBehaviour
         movableObject.transform.position = pointA.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         movableObject.transform.position = Vector3.MoveTowards(movableObject.transform.position, targetPoint.position, moveSpeed * Time.deltaTime);
 
@@ -37,16 +37,6 @@ public class MovingObject : MonoBehaviour
                 }
                 timer = 0f;
             }
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("                   " +collision.gameObject.name);
-            collision.gameObject.transform.parent = this.transform;
         }
     }
 }

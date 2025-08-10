@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - SelectableUI
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

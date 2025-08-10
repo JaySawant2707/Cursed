@@ -39,7 +39,7 @@ public class FallCrackHandler : MonoBehaviour
         {
             float impactSpeed = Mathf.Abs(prevYVelocity);
             HandleImpact(impactSpeed);
-            Debug.Log("handled impact" + impactSpeed);
+            //Debug.Log("handled impact" + impactSpeed);
         }
 
         wasGrounded = isGrounded;
@@ -50,20 +50,20 @@ public class FallCrackHandler : MonoBehaviour
     {
         if (speed >= fatalThreshold)
         {
-            Debug.Log("fatal");
+            //Debug.Log("fatal");
             PlayImpactSound(2);
             onShatter.Invoke();
             return;
         }
         else if (speed >= majorThreshold)
         {
-            Debug.Log("major");
+            //Debug.Log("major");
             crackLevel = Mathf.Max(crackLevel, 2);
             PlayImpactSound(1);
         }
         else if (speed >= minorThreshold)
         {
-            Debug.Log("minor");
+            //Debug.Log("minor");
             crackLevel = Mathf.Max(crackLevel, 1);
             PlayImpactSound(0);
         }
