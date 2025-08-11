@@ -37,8 +37,7 @@ public class SelectObjectUI : MonoBehaviour
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (!EventSystem.current.IsPointerOverGameObject() &&
-            Physics.Raycast(ray, out raycastHit, Mathf.Infinity, selectableLayer))
+        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit, Mathf.Infinity, selectableLayer))
         {
             Transform target = raycastHit.transform;
             MeshRenderer targetRenderer = target.GetComponent<MeshRenderer>();
@@ -61,28 +60,7 @@ public class SelectObjectUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            // if (highlight != null) 
-            // {
-            //     if (selectionRenderer != null && selectionRenderer.material != selectionMaterial)
-            //     {
-            //         originalMaterialSelection = selectionRenderer.material;
-            //         selectionRenderer.material = selectionMaterial;
-            //     }
-
-                ClickLogic(highlight.gameObject);
-
-                // highlight = null;
-                // highlightRenderer = null;
-            //}
-            // else
-            // {
-            //     if (selection != null && selectionRenderer != null)
-            //     {
-            //         selectionRenderer.material = originalMaterialSelection;
-            //         selection = null;
-            //         selectionRenderer = null;
-            //     }
-            // }
+            ClickLogic(highlight.gameObject);
         }
     }
 

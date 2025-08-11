@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class MovingObject : MonoBehaviour
 {
+    [Header("Reference")]
     [SerializeField] GameObject movableObject;
     [SerializeField] Transform pointA;
     [SerializeField] Transform pointB;
+
+    [Header("Settings")]
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] float stopDelay = 1f;
     [SerializeField] bool repeat = true;
@@ -19,6 +22,11 @@ public class MovingObject : MonoBehaviour
     }
 
     void FixedUpdate()
+    {
+        Move();
+    }
+
+    void Move()
     {
         movableObject.transform.position = Vector3.MoveTowards(movableObject.transform.position, targetPoint.position, moveSpeed * Time.deltaTime);
 

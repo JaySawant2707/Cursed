@@ -20,6 +20,11 @@ public class DisappearingPlatform : MonoBehaviour
 
     void Update()
     {
+        CountdownTimer();
+    }
+
+    void CountdownTimer()
+    {
         timer += Time.deltaTime;
         if (timer >= appearIntervalTime)
         {
