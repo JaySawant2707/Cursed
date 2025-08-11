@@ -1,15 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 public class Portal : MonoBehaviour
 {
     const string PLAYER_STRING = "Player";
+
+    [SerializeField] int SceneIndexToLoad;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(PLAYER_STRING))
         {
-            SceneLoader.Instance.LoadScene(SceneManager.GetActiveScene().name);
+            SceneLoader.Instance.LoadScene(SceneIndexToLoad);
         }
     }
 }
