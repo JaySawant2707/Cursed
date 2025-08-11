@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Player died!");
 
-        // trigger animation, effects, sound
+        // TOdo : trigger animation, effects, sound 
 
         if (reloadSceneOnDeath)
         {
@@ -49,7 +49,6 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             ResetHealth();
-            // respawn logic
         }
     }
 

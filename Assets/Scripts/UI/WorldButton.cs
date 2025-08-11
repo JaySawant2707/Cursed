@@ -9,6 +9,7 @@ public class WorldButton : MonoBehaviour
         Options,
         Exit
     }
+
     [SerializeField] ButtonType buttonType;
 
     public void OnClickWorldButton()
@@ -42,6 +43,6 @@ public class WorldButton : MonoBehaviour
     void ExitBtn()
     {
         Application.Quit();
-        Debug.Log("Application QUIT");
+        Debug.Log("Band ho gaya");
     }
 }
