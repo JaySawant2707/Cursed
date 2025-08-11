@@ -15,10 +15,17 @@ public class DisappearingPlatform : MonoBehaviour
     {
         myCollider = GetComponent<Collider>();
         meshRenderer = GetComponent<MeshRenderer>();
-        if (appearOnStart) ToggleOnOff(true);
+        isVisible = appearOnStart;
+        ToggleOnOff(appearOnStart);
+
     }
 
     void Update()
+    {
+        CountdownTimer();
+    }
+
+    void CountdownTimer()
     {
         timer += Time.deltaTime;
         if (timer >= appearIntervalTime)
@@ -49,7 +56,6 @@ public class DisappearingPlatform : MonoBehaviour
             meshRenderer.material.SetFloat("_DissolveAmount", someValue);
             yield return null;
         }
-        someValue = newValue;
         myCollider.enabled = status;
     }
 }
