@@ -6,17 +6,22 @@ public class LightBeamEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Invector.vCharacterController.vThirdPersonInput sc = other.gameObject.GetComponent<Invector.vCharacterController.vThirdPersonInput>();
-            Animator am = other.gameObject.GetComponent<Animator>();
-            Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
-            PlayerHealth ph = other.gameObject.GetComponent<PlayerHealth>();
-            if (sc != null && am != null && rb != null && ph != null)
-            {
-                sc.enabled = false;
-                am.enabled = false;
-                rb.linearVelocity = Vector3.zero;
-                ph.Die();
-            }
+            PetrifyPlayer(other.gameObject);
+        }
+    }
+
+    void PetrifyPlayer(GameObject player)
+    {
+        Invector.vCharacterController.vThirdPersonInput sc = player.GetComponent<Invector.vCharacterController.vThirdPersonInput>();
+        Animator am = player.GetComponent<Animator>();
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        PlayerHealth ph = player.GetComponent<PlayerHealth>();
+        if (sc != null && am != null && rb != null && ph != null)
+        {
+            sc.enabled = false;
+            am.enabled = false;
+            rb.linearVelocity = Vector3.zero;
+            ph.Die();
         }
     }
 }
