@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -60,16 +61,24 @@ public class SelectObjectUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
+            if (highlight)
             ClickLogic(highlight.gameObject);
         }
     }
 
     void ClickLogic(GameObject obj)
     {
-        WorldButton btn = obj.GetComponent<WorldButton>();
-        if (btn != null)
+        try
         {
-            btn.OnClickWorldButton();
+            WorldButton btn = obj.GetComponent<WorldButton>();
+            if (btn != null)
+            {
+                btn.OnClickWorldButton();
+            }
+        }
+        catch (NullReferenceException ex)
+        {
+            Debug.LogError("WorldButton Not Found! : " + ex.ToString());
         }
     }
 }

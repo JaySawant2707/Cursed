@@ -33,7 +33,7 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator LoadSceneRoutine(int sceneIndex)
     {
-        yield return StartCoroutine(Fade(1));
+        yield return StartCoroutine(Fade(2));
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
@@ -52,7 +52,7 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator Fade(float targetAlpha)
     {
-        if (!fadeCanvas) yield break;;
+        if (fadeCanvas == null) yield break;;
 
         float startAlpha = fadeCanvas.alpha;
         float time = 0;

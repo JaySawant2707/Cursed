@@ -1,5 +1,6 @@
 using Mono.Cecil.Cil;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorldButton : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class WorldButton : MonoBehaviour
     }
 
     [SerializeField] ButtonType buttonType;
+
+    [SerializeField] GameObject optionsScreen;
 
     public void OnClickWorldButton()
     {
@@ -32,17 +35,22 @@ public class WorldButton : MonoBehaviour
 
     void StartBtn()
     {
-        Debug.Log("pressed start btn");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     void OptionsBtn()
     {
-        Debug.Log("pressed options btn");
+        optionsScreen.SetActive(true);
     }
 
     void ExitBtn()
     {
         Application.Quit();
         Debug.Log("Band ho gaya");
+    }
+
+    public void BackBtn()
+    {
+        optionsScreen.SetActive(false);
     }
 }
