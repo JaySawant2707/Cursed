@@ -19,6 +19,11 @@ public class SelectObjectUI : MonoBehaviour
 
     RaycastHit raycastHit;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     void Update()
     {
         HandleHighlight();
@@ -62,7 +67,7 @@ public class SelectObjectUI : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (highlight)
-            ClickLogic(highlight.gameObject);
+                ClickLogic(highlight.gameObject);
         }
     }
 

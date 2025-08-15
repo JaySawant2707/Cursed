@@ -1,8 +1,13 @@
+using Invector.vCharacterController;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] ParticleSystem deathParticles;
+    [SerializeField] GameObject model;
+
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 3;
     private int currentHealth;
@@ -40,7 +45,12 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Player died!");
 
-        // TOdo : trigger animation, effects, sound 
+        deathParticles.Play();
+
+        GetComponent<vThirdPersonInput>().enabled = false;
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        GetComponent<Animator>().enabled = false;
+        model.SetActive(false);
 
         if (reloadSceneOnDeath)
         {

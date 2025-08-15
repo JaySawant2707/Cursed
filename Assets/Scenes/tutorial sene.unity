@@ -3097,77 +3097,20 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6048188704126783812, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
+      propertyPath: fadeCanvas
+      value: 
+      objectReference: {fileID: 625662358}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2106893308295606315, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1469406523}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6756248642666356351, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 625662360}
-    - targetCorrespondingSourceObject: {fileID: 6756248642666356351, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 625662364}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
---- !u!224 &625662358 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2106893308295606315, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
+--- !u!225 &625662358 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 4239643168511346761, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
   m_PrefabInstance: {fileID: 625662357}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &625662359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6756248642666356351, guid: 18feaf5e1395de040bb11efd7de1c734, type: 3}
-  m_PrefabInstance: {fileID: 625662357}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &625662360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625662359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 079a1b6a89f936b43aefeef09d67f9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDialougeText:
-  - 'Wizard : What happened ?'
-  - 'Girl : What happened to my body?'
-  - 'Wizard : It seems like you have beed cursed.'
-  - 'Girl : How  can I remove this curse?'
-  - 'Wizard : You have to go in crystal universe. '
-  - 'Girl : Hmmm...'
-  - 'Wizard: There you can find a crystal orb, that orb can remove your curse  '
-  - "Girl : Thank\_you\_Mr.Wizard.."
-  - 
-  - 
-  - 
-  dialougeText: {fileID: 1469406524}
---- !u!95 &625662364
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625662359}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &631540238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
@@ -6056,6 +5999,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+--- !u!224 &1220051602 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+  m_PrefabInstance: {fileID: 8309904670271455697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1220496820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6951,6 +6899,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4023013654594124, guid: 86263e8355f96ba4ab9fdf4e96c2090f, type: 3}
   m_PrefabInstance: {fileID: 1281184150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1450789091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450789092}
+  - component: {fileID: 1450789095}
+  - component: {fileID: 1450789094}
+  - component: {fileID: 1450789093}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1450789092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450789091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1469406523}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1450789093
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450789091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1450789094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450789091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1450789095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450789091}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1451702368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7055,12 +7101,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469406522}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 625662358}
+  m_Children:
+  - {fileID: 1450789092}
+  m_Father: {fileID: 1220051602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -7193,6 +7240,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4627547270634096, guid: 93a135b5c8137e5468cb55d97a43df67, type: 3}
   m_PrefabInstance: {fileID: 951789448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1498900764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498900767}
+  - component: {fileID: 1498900766}
+  - component: {fileID: 1498900765}
+  m_Layer: 0
+  m_Name: Dialouges
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1498900765
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498900764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1498900766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498900764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079a1b6a89f936b43aefeef09d67f9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineDialougeText:
+  - 'Wizard : What happened ?'
+  - 'Girl : What happened to my body?'
+  - 'Wizard : It seems like you have beed cursed.'
+  - 'Girl : How  can I remove this curse?'
+  - 'Wizard : You have to go in crystal universe. '
+  - 'Girl : Hmmm...'
+  - 'Wizard: There you can find a crystal orb, that orb can remove your curse  '
+  - "Girl : Thank\_you\_Mr.Wizard.."
+  - 
+  - 
+  - 
+  dialougeText: {fileID: 1469406524}
+--- !u!4 &1498900767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498900764}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 529.01624, y: 1.4081917, z: 313.16333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1511309081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9917,9 +10044,11 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 1038469677099478581, guid: 28209a5956f7e044cb5b87414c2979db, type: 2}
-    value: {fileID: 625662364}
+    value: {fileID: 1498900765}
   - key: {fileID: -2240011027972087681, guid: 28209a5956f7e044cb5b87414c2979db, type: 2}
     value: {fileID: 1925513583}
+  - key: {fileID: 297717257496409791, guid: 28209a5956f7e044cb5b87414c2979db, type: 2}
+    value: {fileID: 1450789093}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &2017633279
@@ -12883,7 +13012,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1469406523}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -12904,3 +13036,4 @@ SceneRoots:
   - {fileID: 748213051}
   - {fileID: 2017633279}
   - {fileID: 8309904670271455697}
+  - {fileID: 1498900767}
