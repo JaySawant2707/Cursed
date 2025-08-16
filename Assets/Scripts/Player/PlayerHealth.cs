@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("References")]
     [SerializeField] ParticleSystem deathParticles;
     [SerializeField] GameObject model;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip clip;
 
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 3;
@@ -50,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<vThirdPersonInput>().enabled = false;
         GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         GetComponent<Animator>().enabled = false;
+        audioSource.PlayOneShot(clip);
         model.SetActive(false);
 
         if (reloadSceneOnDeath)

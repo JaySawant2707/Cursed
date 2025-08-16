@@ -9,7 +9,7 @@ public class Portal : MonoBehaviour
     {
         if (other.gameObject.CompareTag(PLAYER_STRING))
         {
-            SceneLoader.Instance.LoadScene(SceneIndexToLoad);
+            FindFirstObjectByType<SceneLoader>().LoadScene(SceneIndexToLoad);
         }
     }
 }

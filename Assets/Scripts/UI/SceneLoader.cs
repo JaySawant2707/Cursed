@@ -13,19 +13,6 @@ public class SceneLoader : MonoBehaviour
     [Header("Settings")]
     public float fadeDuration = 0.5f;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     public void LoadScene(int sceneIndex)
     {
         StartCoroutine(LoadSceneRoutine(sceneIndex));
