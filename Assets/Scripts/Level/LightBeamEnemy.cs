@@ -1,4 +1,5 @@
- using UnityEngine;
+using System.Collections;
+using UnityEngine;
 
 public class LightBeamEnemy : MonoBehaviour
 {
@@ -6,11 +7,11 @@ public class LightBeamEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PetrifyPlayer(other.gameObject);
+            StartCoroutine(PetrifyAndKillPlayer(other.gameObject));
         }
     }
 
-    void PetrifyPlayer(GameObject player)
+    IEnumerator PetrifyAndKillPlayer(GameObject player)
     {
         Invector.vCharacterController.vThirdPersonInput sc = player.GetComponent<Invector.vCharacterController.vThirdPersonInput>();
         Animator am = player.GetComponent<Animator>();
@@ -21,6 +22,7 @@ public class LightBeamEnemy : MonoBehaviour
             sc.enabled = false;
             am.enabled = false;
             rb.linearVelocity = Vector3.zero;
+            yield return new WaitForSeconds(1);
             ph.Die();
         }
     }

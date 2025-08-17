@@ -240,6 +240,103 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &505861978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1927124268217326656, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_Name
+      value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532916620888709827, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5668ec93d00a0484cbb81fd904135d17, type: 3}
 --- !u!1 &654024036
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,19 +602,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "License & Asset Acknowledgment\nThis project utilizes assets under the
-    Standard Unity Asset Store EULA.\nLicense Type: Extension Asset\n\nUnity Asset
-    Store Assets Used\nDEXSOFT \u2013 Furniture FREE Pack\n\nHovl Studio \u2013 Magic
-    Effects FREE\n\nN-hance Lab \u2013 Toon Crystals Pack\n\nAbandoned World \u2013
-    Wood Box Pack (15 Objects)\n\nryanpendarvis \u2013 Sunwest Grady C Channel Stair\n\nAta
-    Khani \u2013 Modular Sewer Props\n\nBK \u2013 Alchemist House\n\nALP \u2013 Country
-    House\n\nOrpind \u2013 Modular Fence Sections (Wooden Planks)\n\nBiostart \u2013
-    Free Wood Door Pack\n\nAdditional 3D models such as village structures, Egyptian
-    statues, and various props \nwere sourced from Sketchfab and the Unity Asset
-    Store in accordance with their respective licenses.\n\nGame Development Team\nSujal
-    Adak \u2013 Team Leader & Game Designer\n\nShrikant Jadhav \u2013 Research &
-    Asset Management\n\nJay Sawant \u2013 Game Programmer\n\nOm Gupta \u2013 3D Artist\n\nSpecial
-    Thanks\nTo all the artists and developers whose free and licensed assets helped
-    bring this world to life.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    Standard Unity Asset Store EULA.\nLicense Type: Extension Asset\n\n--Unity Asset
+    Store Assets Used--\n\nInvector-3rdPersonController_LITE\nDEXSOFT \u2013 Furniture
+    FREE Pack\nHovl Studio \u2013 Magic Effects FREE\nN-hance Lab \u2013 Toon Crystals
+    Pack\nAbandoned World \u2013 Wood Box Pack (15 Objects)\nryanpendarvis \u2013
+    Sunwest Grady C Channel Stair\nAta Khani \u2013 Modular Sewer Props\nBK \u2013
+    Alchemist House\nALP \u2013 Country House\nOrpind \u2013 Modular Fence Sections
+    (Wooden Planks)\nBiostart \u2013 Free Wood Door Pack\n\nAdditional 3D models
+    such as village structures, Egyptian statues, and various props \nwere sourced
+    from Sketchfab and the Unity Asset Store in accordance with their respective
+    licenses.\n\n--Game Development Team--\n\nSujal Adak \u2013 Team Leader & Game
+    Designer\n\nShrikant Jadhav \u2013 Research & Asset Management\n\nJay Sawant
+    \u2013 Game Programmer\n\nOm Gupta \u2013 3D Artist\n\nSpecial Thanks\nTo all
+    the artists and developers whose free and licensed assets helped bring this world
+    to life.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1049,3 +1147,4 @@ SceneRoots:
   - {fileID: 1664155030}
   - {fileID: 1269816118}
   - {fileID: 654024038}
+  - {fileID: 505861978}
