@@ -19,6 +19,12 @@ public class Wizard : MonoBehaviour
     public bool fire = false;
 
     float fireTimer;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -55,6 +61,8 @@ public class Wizard : MonoBehaviour
     {
         GameObject projectileObj = Instantiate(projectilePrefab, ProPosition, ProRotation);
         Projectile projectile = projectileObj.GetComponent<Projectile>();
+
+        audioSource.Play();
 
         if (projectile != null)
         {

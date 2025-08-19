@@ -8,15 +8,19 @@ public class PickUpOrb : MonoBehaviour
     [SerializeField] GameObject orb;
     [SerializeField] GameObject portal;
 
+    AudioSource audioSource;
+
     void Start()
     {
         portal.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            audioSource.Play();
             Destroy(orb);
             portal.SetActive(true);
             StartCoroutine(Something());

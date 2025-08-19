@@ -9,13 +9,11 @@ public class SelectObjectUI : MonoBehaviour
     [SerializeField] private LayerMask selectableLayer;
 
     Material originalMaterialHighlight;
-    Material originalMaterialSelection;
 
     Transform highlight;
     Transform selection;
 
     MeshRenderer highlightRenderer;
-    MeshRenderer selectionRenderer;
 
     RaycastHit raycastHit;
 
