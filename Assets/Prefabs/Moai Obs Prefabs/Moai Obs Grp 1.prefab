@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upDownDistance: 6.2
-  forwardDistance: 50
+  forwardDistance: 55
   moveSpeed: 8
   waitTime: 0.5
 --- !u!1001 &1669786685794834361
