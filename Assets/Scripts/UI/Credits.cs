@@ -5,6 +5,6 @@ public class Credits : MonoBehaviour
 {
     public void OpenMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

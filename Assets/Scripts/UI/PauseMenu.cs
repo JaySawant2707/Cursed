@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void SettingsBtn()

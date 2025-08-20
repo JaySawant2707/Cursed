@@ -9785,7 +9785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 579024608254342470, guid: f466d5a8a8e541a429743c7f3cb2b00a, type: 3}
       propertyPath: SceneIndexToLoad
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5601342655972261810, guid: f466d5a8a8e541a429743c7f3cb2b00a, type: 3}
       propertyPath: m_LocalPosition.x
