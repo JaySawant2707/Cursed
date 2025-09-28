@@ -35,16 +35,21 @@ public class MovingObject : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= stopDelay)
             {
-                if (targetPoint == pointA)
-                {
-                    targetPoint = pointB;
-                }
-                else
-                {
-                    targetPoint = pointA;
-                }
-                timer = 0f;
+                ChangeTargetPoint();
             }
         }
+    }
+    
+    void ChangeTargetPoint()
+    {
+        if (targetPoint == pointA)
+        {
+            targetPoint = pointB;
+        }
+        else
+        {
+            targetPoint = pointA;
+        }
+        timer = 0f;
     }
 }
